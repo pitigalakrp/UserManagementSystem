@@ -13,6 +13,7 @@ export const addUser = createAsyncThunk('userData/addUser', async state => {
 
     if (res.status === 200) {
       toast.success('Added')
+      
     } else {
       toast.error('Fail')
     }
@@ -22,5 +23,3 @@ export const addUser = createAsyncThunk('userData/addUser', async state => {
     throw toast.error(error.message)
   }
 })
-
-
