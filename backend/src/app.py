@@ -6,12 +6,6 @@ from urllib.parse import quote_plus  # Import the quote_plus function
 app = Flask(__name__)
 CORS(app)
 
-# Encode the username and password using quote_plus
-username = "pitigalakrp"
-password = "123@123@123"  # Replace with your actual MongoDB password
-encoded_username = quote_plus(username)
-encoded_password = quote_plus(password)
-
 # Construct the MongoDB URI
 mongo_uri = f"mongodb://localhost:27017/UserManagementSystem"
 app.config['MONGO_URI'] = mongo_uri
